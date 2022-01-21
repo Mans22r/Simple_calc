@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first {
+            position: relative;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .second {
+            position: relative;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .third {
+            position: relative;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        #btn1 {
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            margin-left: 15px;
+        }
+        #btn2 {
+            display: inline-block;
+            height: 25px;
+            width: 25px;
+            margin-left: 5px;
+        }
+        #btn3 {
+            display: inline;
+            height: 25px;
+            width: 25px;
+            margin-left: 5px;
+        }
+        #btn4 {
+            display: inline;
+            height: 25px;
+            width: 25px;
+            margin-left: 5px;
+        }
+    </style>
+
+    <script>
+        function add() {
+           var num1= parseInt(document.getElementById("first").value);
+           var num2= parseInt(document.getElementById("second").value);
+           const result=num1 + num2 ;
+           document.getElementById("third").value=result;
+        }    
+        
+        function sub() {
+           var num1= parseInt(document.getElementById("first").value);
+           var num2= parseInt(document.getElementById("second").value);
+           const result=num1 - num2 ;
+           document.getElementById("third").value=result;
+        } 
+
+        function multi() {
+           var num1= parseInt(document.getElementById("first").value);
+           var num2= parseInt(document.getElementById("second").value);
+           const result=num1 * num2 ;
+           document.getElementById("third").value=result;
+        } 
+
+        function div() {
+           var num1= parseInt(document.getElementById("first").value);
+           var num2= parseInt(document.getElementById("second").value);
+           const result=num1 / num2 ;
+           document.getElementById("third").value=result;
+        } 
+    </script>
+</head>
+<body>
+    <form>
+       <input id="first" class="first" type="number">
+       <input id="second" class="second" type="number">
+       <input id="third" class="third" type="number">
+       <button onclick="add()" id="btn1">+</button>
+       <button onclick="sub()" id="btn2">-</button>
+       <button onclick="multi()" id="btn3">*</button>
+       <button onclick="div()" id="btn4">/</button>
+    </form>
+</body>
+</html>
